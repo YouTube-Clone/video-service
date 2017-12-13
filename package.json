@@ -4,7 +4,8 @@
   "description": "",
   "main": "eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "./seeds"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "body-parser": "^1.18.2",
     "bookshelf": "^0.12.0",
     "express": "^4.16.2",
+    "faker": "^4.1.0",
     "knex": "^0.14.2",
     "pg": "^7.4.0"
   },
