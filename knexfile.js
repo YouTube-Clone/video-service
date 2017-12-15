@@ -9,11 +9,10 @@ module.exports = {
       password: '',
       database: 'youtube',
       pool: {
-        min: 5,
-        max: 200
+        min: 1,
+        max: 75
       },
     },
-    debug: true,
     migrations: {
       directory: path.join(__dirname, '/db/migrations'),
     },

@@ -5,7 +5,7 @@
   "main": "eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "./seeds"
+    "seed": "./db/dummyData/seeds"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "knex": "^0.14.2",
+    "nodemon": "^1.12.6",
     "pg": "^7.4.0"
   },
   "devDependencies": {
