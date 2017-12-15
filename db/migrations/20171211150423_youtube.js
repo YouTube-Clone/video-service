@@ -30,7 +30,7 @@ exports.up = (knex, Promise) =>
       table.integer('channelId').references('channels.id');
     })
     .createTable('videos_in_channel', (table) => {
-      table.integer('videoId').references('videos.id');
+      table.integer('videoId');
       table.integer('channelId').references('channels.id');
     });
 

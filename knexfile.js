@@ -10,7 +10,7 @@ module.exports = {
       database: 'youtube',
       pool: {
         min: 1,
-        max: 75
+        max: 75,
       },
     },
     migrations: {

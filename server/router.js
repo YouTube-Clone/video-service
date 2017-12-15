@@ -1,4 +1,3 @@
-const fs = require('fs');
 const router = require('express').Router();
 const video = require('./video');
 
@@ -18,10 +17,5 @@ router.route('/video')
   .post((req, res) => {
     video.post(req, res);
   });
-
-router.route('/api/video').get((req, res) => {
-  res.writeHead(200, { ContenType: 'video/3pg' });
-  fs.createReadStream(__dirname + '/videoplayback.3gp').pipe(res);
-});
 
 module.exports = router;
