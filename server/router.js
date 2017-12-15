@@ -1,16 +1,27 @@
-const express = require('express');
+const fs = require('fs');
+const router = require('express').Router();
+const video = require('./video');
 
-const router = express.Router();
-router.get('/video/:Id', (req, res) => {
-    
+
+router.route('/video/:Id')
+  .get((req, res) => {
+    video.get(req, res);
+  })
+  .put((req, res) => {
+    video.put(req, res);
+  })
+  .delete((req, res) => {
+    video.delete(req, res);
+  });
+
+router.route('/video')
+  .post((req, res) => {
+    video.post(req, res);
+  });
+
+router.route('/api/video').get((req, res) => {
+  res.writeHead(200, { ContenType: 'video/3pg' });
+  fs.createReadStream(__dirname + '/videoplayback.3gp').pipe(res);
 });
 
-router.post('/videoCreate/', (req, res) => {
-    
-});
-
-router.put('/video/:Id', (req, res) => {
-
-});
-
-router.
+module.exports = router;
