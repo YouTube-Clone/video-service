@@ -3,8 +3,6 @@ const knex = require('../db/knex');
 module.exports = {
   get: (req, res) => {
     knex('videos').where('id', req.params.Id).then((video) => {
-      // res.writeHead(200, { ContenType: 'video/mp4' });
-      // fs.createReadStream(__dirname + `/..${video[0].url}.mp4`).pipe(res);
       res.json(video);
     }).catch((err) => {
       if (err) {
@@ -42,7 +40,7 @@ module.exports = {
           throw err;
         }
         res.status(404).json('Failed to delete');
-      })
-  }
+      });
+  },
 };
 
