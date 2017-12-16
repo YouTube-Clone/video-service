@@ -10,7 +10,9 @@ exports.up = (knex, Promise) =>
       table.string('category');
       table.integer('length');
       table.bigInteger('views');
-      table.string('url');
+      table.string('type');
+      table.integer('ad_binary');
+      table.integer('binary');
       table.integer('creator').references('users.id');
       table.timestamp('created_at').defaultTo(knex.fn.now());
     })
