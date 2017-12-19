@@ -1,10 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const router = require('./router');
 const apm = require('elastic-apm-node').start({
   appName: 'video',
   serverUrl: 'http://localhost:8200',
 });
+const express = require('express');
+const bodyParser = require('body-parser');
+const router = require('./router');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
