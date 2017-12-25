@@ -1,15 +1,17 @@
 const knex = require('../db/knex');
 
 module.exports = {
-  get: (req, res) => {
-    knex('videos').where('id', req.params.Id).then((video) => {
-      res.json(video);
-    }).catch((err) => {
-      if (err) {
-        console.log('video not found with given id', err);
-        res.status(404).end();
-      }
-    });
+  get: async (req, res) => {
+    const video = await knex('videos').where('id', req.params.Id);
+    res.json(video);
+    // knex('videos').where('id', req.params.Id).then((video) => {
+    //   res.json(video);
+    // }).catch((err) => {
+    //   if (err) {
+    //     console.log('video not found with given id', err);
+    //     res.status(404).end();
+    //   }
+    // });
   },
   put: (req, res) => {
     knex('videos').where('id', req.params.Id).update(req.body)
