@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.1-alpine
+    environment:
+      POSTGRES_USER: jinxuanlin
+      POSTGRES_DB: youtube
+  node:
+    build: .
+    depends_on:
+      - 'db'
+    ports:
+      - '3000:3000'
