@@ -5,6 +5,7 @@
   "main": "eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "./node_modules/.bin/knex migrate:latest",
     "seed": "./db/dummyData/seeds"
   },
   "repository": {
