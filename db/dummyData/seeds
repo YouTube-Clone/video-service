@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+node ./db/dummyData/01_users.js
+node ./db/dummyData/04_videos_03.js
+node ./db/dummyData/05_ads_channels.js
+node ./db/dummyData/06_subscribers_01.js
+node ./db/dummyData/09_videosInChannel_01.js

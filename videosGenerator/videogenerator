@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+node ../videosGenerator/videoGenerator.js
+node ../videosGenerator/videoGenerator2.js
+node ../videosGenerator/videoGenerator3.js
+node ../videosGenerator/videoGenerator4.js
+node ../videosGenerator/videoGenerator5.js
+node ../videosGenerator/videoGenerator6.js
+node ../videosGenerator/videoGenerator7.js
+node ../videosGenerator/videoGenerator8.js
+node ../videosGenerator/videoGenerator9.js
+node ../videosGenerator/videoGenerator10.js

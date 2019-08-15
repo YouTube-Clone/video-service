@@ -10,6 +10,9 @@ exports.up = (knex, Promise) =>
       table.string('category');
       table.integer('length');
       table.bigInteger('views');
+      table.string('type');
+      table.integer('ad_binary');
+      table.integer('binary');
       table.integer('creator').references('users.id');
       table.timestamp('created_at').defaultTo(knex.fn.now());
     })
@@ -29,7 +32,7 @@ exports.up = (knex, Promise) =>
       table.integer('channelId').references('channels.id');
     })
     .createTable('videos_in_channel', (table) => {
-      table.integer('videoId').references('videos.id');
+      table.integer('videoId');
       table.integer('channelId').references('channels.id');
     });
 
